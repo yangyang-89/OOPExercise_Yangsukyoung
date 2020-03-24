@@ -95,8 +95,9 @@ public class MemberManager {
 			System.out.println("수정할 회원이 존재하지 않습니다.");
 		}
 	}
-	
-	public void updateName() {}
+	public void updateName() {
+		
+	} 
 	public void updataEmail() {}
 	public void deleteOne() {}
 	public void deleteAll() {}
