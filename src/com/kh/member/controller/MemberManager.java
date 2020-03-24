@@ -12,7 +12,6 @@ public class MemberManager {
 
 	public MemberManager() {}
 	public void insertMember() {
-		for(int i=0; i<ctn; i++) {
 			System.out.println("Id : ");
 			String id=sc.next();
 			System.out.println("Pwd : ");
@@ -25,9 +24,11 @@ public class MemberManager {
 			char gender=sc.next().charAt(0);
 			System.out.println("Email : ");
 			String email=sc.next();
+			System.out.println();
 
-			m[i]=new Member(id,pwd,name,age,gender,email);
-		}
+			m[ctn]=new Member(id,pwd,name,age,gender,email);
+			ctn++;
+		
 		System.out.println("입력이 완료되었습니다. 메인 메뉴로 돌아갑니다.");
 	}
 	public void searchId() {
@@ -149,12 +150,12 @@ public class MemberManager {
 	public void deleteAll() {}
 	public void printAllMember() {}
 	public void printOne(Member m) {
-		System.out.print("ID : "+m.getUserId());
-		System.out.print("Password : "+m.getUserPwd());
-		System.out.print("Name : "+m.getUserName());
-		System.out.print("Age : "+m.getAge());
-		System.out.print("Gender : "+m.getGender());
-		System.out.print("Email : "+m.getEmail());
+		System.out.println("ID : "+m.getUserId());
+		System.out.println("Password : "+m.getUserPwd());
+		System.out.println("Name : "+m.getUserName());
+		System.out.println("Age : "+m.getAge());
+		System.out.println("Gender : "+m.getGender());
+		System.out.println("Email : "+m.getEmail());
 	}
 
 }
